@@ -6,6 +6,7 @@ import {Ingredient} from "../../shared/ingredient.model";
   templateUrl: './shopping-edit.component.html',
   styleUrl: './shopping-edit.component.css'
 })
+
 export class ShoppingEditComponent {
   @ViewChild('nameInput', {static: false}) nameInputRef: ElementRef;
   @ViewChild('amountInput', {static: false}) amountInputRef: ElementRef;
@@ -17,6 +18,4 @@ export class ShoppingEditComponent {
     const newIngredient = new Ingredient(name, amount);
     this.ingredientAdded.emit(newIngredient);
   }
-
-
 }
